@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BookCRUDModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Libros">
+    <Key>
+      <PropertyRef Name="idLibro" />
+    </Key>
+    <Property Name="idLibro" Type="Int32" Nullable="false" />
+    <Property Name="nombreLibro" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="autorLibro" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="fechaLibro" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityContainer Name="BookCRUDEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Libros" EntityType="Self.Libros" />
+  </EntityContainer>
+</Schema>
